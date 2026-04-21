@@ -1,0 +1,108 @@
+/* =============================================
+   INDEX.CSS - Khusus index.html
+   ============================================= */
+
+/* Section backgrounds */
+body.dark-mode #home    { background-color: #162A33; }
+body.dark-mode #about   { background-color: #1C3340; }
+body.dark-mode #project { background-color: #162A33; }
+body.dark-mode #contact { background-color: #1C3340; }
+
+body.light-mode #home    { background-color: #e8e8e8; }
+body.light-mode #about   { background-color: #d8d8d8; }
+body.light-mode #project { background-color: #e8e8e8; }
+body.light-mode #contact { background-color: #d8d8d8; }
+
+/* ===== HOME SECTION ===== */
+#home {
+  gap: 80px;
+  padding-left: 10%;
+}
+
+.fadhil-mono-1 {
+  width: 38%;
+  max-width: 520px;
+  border-radius: 50%;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+.intro {
+  flex: 1;
+}
+
+.greeting {
+  font-size: 20px;
+  opacity: 0.7;
+  margin-bottom: 8px;
+}
+
+#typing-target {
+  font-size: 72px;
+  font-weight: 700;
+  min-height: 90px;
+  margin-bottom: 12px;
+}
+
+.tagline {
+  font-size: 20px;
+  opacity: 0.65;
+  margin-bottom: 28px;
+}
+
+.intro-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ===== ABOUT / PROJECT / CONTACT SECTIONS ===== */
+.about-div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.about-word { flex: 1; }
+
+.picture-about {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.picture-about img,
+.about-img,
+.project-img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* ===== CONTACT ===== */
+.contact-email {
+  font-size: 15px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #345766;
+  transition: transform 0.2s ease;
+}
+
+.social-link:hover { transform: scale(1.15); }

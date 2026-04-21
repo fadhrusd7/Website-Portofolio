@@ -8,48 +8,112 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
-  
-  <body class="body">
+
+  <body class="body dark-mode">
+
     <nav class="nav">
       <div class="identity">
         <div class="field-identity">
           <span class="fadhil">FADHIL RUSADI</span>
         </div>
       </div>
-
       <div class="nav-right">
         <ul class="nav-links">
-          <li>
-            <a class="page-link" href="/index.html">Home</a>
-          </li>
-          <li>
-            <a class="page-link" href="/about.html">About</a>
-          </li>
-          <li>
-            <a class="page-link" href="/project.html">Project</a>
-          </li>
+          <li><a class="page-link active smooth-scroll" href="#home">Home</a></li>
+          <li><a class="page-link smooth-scroll" href="#about">About</a></li>
+          <li><a class="page-link smooth-scroll" href="#project">Project</a></li>
         </ul>
-        <button class="mode">
-          <img src="asset/moon.png" alt="mode" width="25px"/>
+        <button class="mode" id="themeToggle">
+          <img src="asset/moon.png" alt="toggle theme" width="25px" id="themeIcon" />
         </button>
       </div>
     </nav>
+
     <section id="home">
-      <img class="fadhil-mono-1" src="asset/fadh-mono-1.png" alt="fadhil">
+      <img class="fadhil-mono-1 photo-hover" src="asset/fadhil-hero.png" alt="Fadhil Rusadi" />
       <div class="intro">
-        <h1>
-          <h2>
-            <h3>
-              
-            </h3>
-          </h2>
-        </h1>
+        <p class="greeting">Hi There</p>
+        <h1 id="typing-target"></h1>
+        <p class="tagline">I make the complex simple</p>
+        <div class="intro-buttons">
+          <a href="asset/cv.pdf" class="btn btn-outline" download>Download CV</a>
+          <a href="#contact" class="btn btn-outline smooth-scroll">Contact Me</a>
+        </div>
       </div>
     </section>
+
+    <section id="about" class="fade-section">
+      <div class="about-div">
+        <div class="about-word">
+          <h2 class="section-title">About Me</h2>
+          <div class="section-underline-1"></div>
+          <div class="section-underline-2"></div>
+          <p class="section-sub">A brief introduction about me</p>
+          <a href="about.html" class="btn btn-outline">Learn More</a>
+        </div>
+        <div class="picture-about">
+          <img class="about-img photo-hover" src="asset/fadhil-about.png" alt="About Fadhil" />
+        </div>
+      </div>
+    </section>
+
+    <section id="project" class="fade-section">
+      <div class="about-div">
+        <div class="about-word">
+          <h2 class="section-title">My Project</h2>
+          <div class="section-underline-1"></div>
+          <div class="section-underline-2"></div>
+          <p class="section-sub">List of my project that I have done and currently working on</p>
+          <a href="project.html" class="btn btn-outline">See My Project</a>
+        </div>
+        <div class="picture-about">
+          <img class="project-img photo-hover" src="asset/project.png" alt="Project" />
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="fade-section">
+      <div class="about-div">
+        <div class="about-word">
+          <h2 class="section-title">Contact</h2>
+          <div class="section-underline-1"></div>
+          <div class="section-underline-2"></div>
+          <p class="section-sub">Feel free to contact me if you have any question or just to say hi.</p>
+          <p class="contact-email">fadhilrusadi5@gmail.com</p>
+          <div class="social-icons">
+            <a href="mailto:fadhilrusadi5@gmail.com" class="social-link">
+              <img src="asset/mail-dark.png" alt="email" width="30px" />
+            </a>
+            <a href="https://github.com/fadhrusd7" class="social-link" target="_blank">
+              <img src="asset/github-dark.png" alt="github" width="30px" />
+            </a>
+            <a href="https://instagram.com/fadhrusd" class="social-link" target="_blank">
+              <img src="asset/instagram-dark.png" alt="instagram" width="30px" />
+            </a>
+            <a href="https://www.linkedin.com/in/fadhilrusadi/" class="social-link" target="_blank">
+              <img src="asset/linkedin-dark.png" alt="linkedin" width="30px" />
+            </a>
+          </div>
+        </div>
+        <div class="picture-about">
+          <img class="photo-hover" src="asset/contact.png" alt="Contact" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <p>© 2024 Fadhil Rusadi. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+
   </body>
 </html>
