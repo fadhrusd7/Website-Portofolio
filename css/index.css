@@ -27,9 +27,7 @@ body.light-mode #contact { background-color: #d8d8d8; }
   aspect-ratio: 1;
 }
 
-.intro {
-  flex: 1;
-}
+.intro { flex: 1; }
 
 .greeting {
   font-size: 20px;

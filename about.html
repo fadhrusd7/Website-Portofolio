@@ -17,6 +17,7 @@
 
   <body class="body dark-mode">
 
+    <!-- NavBar -->
     <nav class="nav">
       <div class="identity">
         <div class="field-identity">
@@ -35,13 +36,18 @@
       </div>
     </nav>
 
+    <!-- Button Back to Top -->
+    <button id="backToTop" title="Back to top" aria-label="Back to top">↑</button>
+
+    <!-- About Hero Section -->
     <section id="about-hero" class="fade-section">
       <div class="about-div">
         <div class="about-word">
           <h2 class="section-title">About Me</h2>
-          <div class="section-underline"></div>
+          <div class="section-underline-1"></div>
+          <div class="section-underline-2"></div>
           <p class="section-sub">A brief introduction about me</p>
-          <a href="#bio" class="btn btn-outline smooth-scroll">Scroll Down</a>
+          <a href="#bio" class="btn btn-outline smooth-scroll">Scroll Down ↓</a>
         </div>
         <div class="picture-about">
           <img class="about-img photo-hover" src="asset/fadhil-about.png" alt="Fadhil" />
@@ -49,6 +55,7 @@
       </div>
     </section>
 
+    <!-- Bio Section -->
     <section id="bio" class="fade-section bio-section">
       <div class="bio-grid">
         <div class="bio-photos">
@@ -64,7 +71,7 @@
         <div class="bio-text">
           <h3 class="bio-name">Fadhil Rusadi</h3>
           <p>
-            I'm Fadhil Rusadi, a Informatics student at Universitas Sebelas Maret (UNS).
+            I'm Fadhil Rusadi, an Informatics student at Universitas Sebelas Maret (UNS).
             I enjoy learning by building real projects, especially in software development
             and autonomous systems.
           </p>
@@ -78,21 +85,33 @@
       </div>
     </section>
 
-
+    <!-- Skills Section -->
     <section id="skills" class="fade-section skills-section">
       <h2 class="section-title center">Skills and Expertise</h2>
       <div class="skills-icons">
         <div class="skill-item">
           <span class="skill-icon">
-            <img src="asset/web-development.png" alt="web development" width="50px" />
+            <img src="asset/web-development.png" alt="web development" width="50px" id="web" />
           </span>
           <p>Web Development</p>
         </div>
         <div class="skill-item">
           <span class="skill-icon">
-            <img src="asset/machine-learninnng.png" alt="machine learning" width="50px" />
+            <img src="asset/machine-learning.png" alt="machine learning" width="50px" id="ml" />
           </span>
           <p>Machine Learning</p>
+        </div>
+        <div class="skill-item">
+          <span class="skill-icon">
+            <img src="asset/tools-dark.png" alt="tools" width="50px" id="tools" />
+          </span>
+          <p>Dev Tools</p>
+        </div>
+        <div class="skill-item">
+          <span class="skill-icon">
+            <img src="asset/database-dark.png" alt="database" width="50px" id="database" />
+          </span>
+          <p>Database</p>
         </div>
       </div>
       <div class="skills-table">
@@ -102,11 +121,16 @@
         </div>
         <div class="skills-col">
           <p class="skills-label">TOOLS</p>
-          <p class="skills-value">Visual Studio Code | Figma | Github</p>
+          <p class="skills-value">Visual Studio Code | Figma | GitHub</p>
+        </div>
+        <div class="skills-col">
+          <p class="skills-label">MACHINE LEARNING</p>
+          <p class="skills-value">YOLO | Python</p>
         </div>
       </div>
     </section>
 
+    <!-- Experience Section -->
     <section id="experience" class="fade-section timeline-section">
       <div class="timeline-header">
         <div class="timeline-line-1"></div>
@@ -114,21 +138,27 @@
         <h3 class="timeline-title">Experience</h3>
       </div>
       <div class="timeline">
-        <div class="timeline-item">
+        <!-- Accordion Item -->
+        <div class="timeline-item accordion-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <p class="timeline-date">2024 - Present</p>
-            <h4 class="timeline-company">Bengawan Unmanned Vehicle</h4>
-            <p>I developed a web-based monitoring system for an Autonomous Surface Vessel (ASV) to track and visualize vessel data during operation. This system was designed to support monitoring, analysis, and evaluation of ASV performance in real-world environments.</p>
+          <div class="accordion-header">
+            <div>
+              <p class="timeline-date">2024 – Present</p>
+              <h4 class="timeline-company">Bengawan Unmanned Vehicle</h4>
+            </div>
+            <span class="accordion-arrow">▼</span>
+          </div>
+          <div class="accordion-body">
+            <p>Developed a web-based monitoring system for an Autonomous Surface Vessel (ASV) to track and visualize vessel data during operation. This system supports monitoring, analysis, and evaluation of ASV performance in real-world environments.</p>
             <span class="badge"><a href="https://tailwindcss.com" target="_blank" class="badge-link">Tailwind CSS</a></span>
-            <p>I developed an object detection system using a YOLO-based machine learning model for camera sensor data on an Autonomous Surface Vessel (ASV).</p>
+            <p>Developed an object detection system using a YOLO-based machine learning model for camera sensor data on the ASV.</p>
             <span class="badge"><a href="https://docs.ultralytics.com" target="_blank" class="badge-link">YOLO</a></span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== EDUCATION SECTION ===== -->
+    <!-- Education Section -->
     <section id="education" class="fade-section timeline-section">
       <div class="timeline-header">
         <div class="timeline-line-1"></div>
@@ -136,38 +166,46 @@
         <h3 class="timeline-title">Education</h3>
       </div>
       <div class="timeline">
-        <div class="timeline-item">
+        <div class="timeline-item accordion-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <p class="timeline-date">2024 - Present</p>
-            <h4 class="timeline-company">Universitas Sebelas Maret</h4>
+          <div class="accordion-header">
+            <div>
+              <p class="timeline-date">2024 – Present</p>
+              <h4 class="timeline-company">Universitas Sebelas Maret</h4>
+            </div>
+            <span class="accordion-arrow">▼</span>
+          </div>
+          <div class="accordion-body">
             <p>Currently pursuing a Bachelor of Informatics degree with a focus on software development, systems, and project-based learning.</p>
           </div>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item accordion-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <p class="timeline-date">2021 - 2024</p>
-            <h4 class="timeline-company">SMA Negeri 1 Cilacap</h4>
-            <p>Completed my high school education with a focus on science, building a foundation for further studies in computer science and engineering.</p>
+          <div class="accordion-header">
+            <div>
+              <p class="timeline-date">2021 – 2024</p>
+              <h4 class="timeline-company">SMA Negeri 1 Cilacap</h4>
+            </div>
+            <span class="accordion-arrow">▼</span>
+          </div>
+          <div class="accordion-body">
+            <p>Completed high school with a focus on science, building a foundation for further studies in computer science and engineering.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== QUOTE SECTION ===== -->
+    <!-- Quote Section -->
     <section id="quote" class="fade-section quote-section">
       <h2 class="quote-text">"No Sacrifice <span class="quote-accent">No Victory</span>"</h2>
     </section>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- Footer -->
     <footer class="footer">
       <p>© 2024 Fadhil Rusadi. All rights reserved.</p>
     </footer>
 
-    <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <!-- Custom JS -->
     <script src="js/main.js"></script>
   </body>
 </html>

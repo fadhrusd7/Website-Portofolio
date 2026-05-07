@@ -1,3 +1,8 @@
+/* =============================================
+   ABOUT.CSS - Khusus about.html
+   ============================================= */
+
+/* Section backgrounds */
 body.dark-mode #about-hero  { background-color: #1C3340; }
 body.dark-mode #bio         { background-color: #162A33; }
 body.dark-mode #skills      { background-color: #1C3340; }
@@ -12,22 +17,29 @@ body.light-mode #experience { background-color: #e8e8e8; }
 body.light-mode #education  { background-color: #d8d8d8; }
 body.light-mode #quote      { background-color: #e8e8e8; }
 
-body.dark-mode .skills-label  { color: #82C8E5; }
-body.dark-mode .bio-name      { color: #ffffff; }
-body.dark-mode .timeline-dot  { background-color: #82C8E5; }
-body.dark-mode .timeline-line-1 { background-color: #82C8E5; }
-body.dark-mode .timeline-line-2 { background-color: #82C8E5; }
-body.dark-mode .quote-accent  { color: #829FAB; }
+/* Component colors by theme */
+body.dark-mode .bio-name          { color: #ffffff; }
+body.dark-mode .timeline-dot      { background-color: #82C8E5; }
+body.dark-mode .timeline-line-1,
+body.dark-mode .timeline-line-2   { background-color: #82C8E5; }
+body.dark-mode .quote-accent      { color: #82C8E5; }
+body.dark-mode .accordion-header  { border-color: #345766; }
+body.dark-mode .accordion-arrow   { color: #82C8E5; }
+body.dark-mode .skills-label      { color: #82C8E5; }
 
-body.light-mode .skills-label { color: #345766; }
-body.light-mode .bio-name     { color: #162A33; }
-body.light-mode .timeline-dot  { background-color: #162A33; }
-body.light-mode .timeline-line-1 { background-color: #162A33; }
-body.light-mode .timeline-line-2 { background-color: #162A33; }
-body.light-mode .quote-accent { color: #345766; }
-body.light-mode .quote-text   { color: #162A33; }
+body.light-mode .bio-name          { color: #162A33; }
+body.light-mode .timeline-dot      { background-color: #162A33; }
+body.light-mode .timeline-line-1,
+body.light-mode .timeline-line-2   { background-color: #162A33; }
+body.light-mode .quote-accent      { color: #345766; }
+body.light-mode .quote-text        { color: #162A33; }
+body.light-mode .timeline          { border-left-color: #345766; }
+body.light-mode .timeline-company  { color: #345766; }
+body.light-mode .accordion-header  { border-color: #c8c8c8; }
+body.light-mode .accordion-arrow   { color: #345766; }
+body.light-mode .skills-label      { color: #345766; }
 
-/* About Hero */
+/* ===== ABOUT HERO ===== */
 .about-div {
   display: flex;
   width: 100%;
@@ -51,7 +63,7 @@ body.light-mode .quote-text   { color: #162A33; }
   object-fit: cover;
 }
 
-/* Bio Section */
+/* ===== BIO SECTION ===== */
 .bio-section {
   min-height: auto;
   padding: 80px 8%;
@@ -93,7 +105,6 @@ body.light-mode .quote-text   { color: #162A33; }
 }
 
 .bio-col-left .bio-photo { flex: 1; }
-
 .bio-photo-small { flex: 0.6; }
 .bio-photo-large { flex: 1.4; }
 
@@ -112,7 +123,7 @@ body.light-mode .quote-text   { color: #162A33; }
   opacity: 0.85;
 }
 
-/* Skills Section */
+/* ===== SKILLS SECTION ===== */
 .skills-section {
   min-height: auto;
   padding: 80px 8%;
@@ -124,6 +135,7 @@ body.light-mode .quote-text   { color: #162A33; }
   gap: 60px;
   justify-content: center;
   margin: 40px 0 32px;
+  flex-wrap: wrap;
 }
 
 .skill-item {
@@ -141,10 +153,13 @@ body.light-mode .quote-text   { color: #162A33; }
   display: flex;
   gap: 80px;
   width: 100%;
-  max-width: 700px;
+  max-width: 800px;
   padding-top: 24px;
   border-top: 1.5px solid #345766;
+  flex-wrap: wrap;
 }
+
+body.light-mode .skills-table { border-top-color: #c0c0c0; }
 
 .skills-label {
   font-size: 12px;
@@ -158,7 +173,7 @@ body.light-mode .quote-text   { color: #162A33; }
   opacity: 0.85;
 }
 
-/* Timeline Section */
+/* ===== TIMELINE / EXPERIENCE / EDUCATION ===== */
 .timeline-section {
   min-height: auto;
   padding: 60px 8%;
@@ -202,10 +217,6 @@ body.light-mode .quote-text   { color: #162A33; }
   max-width: 700px;
 }
 
-body.light-mode .timeline {
-  border-left-color: #345766;
-}
-
 .timeline-item {
   position: relative;
   padding-left: 32px;
@@ -214,7 +225,7 @@ body.light-mode .timeline {
 .timeline-dot {
   position: absolute;
   left: -33px;
-  top: 4px;
+  top: 14px;
   width: 18px;
   height: 18px;
   border-radius: 50%;
@@ -223,18 +234,14 @@ body.light-mode .timeline {
 .timeline-date {
   font-size: 13px;
   opacity: 0.6;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .timeline-company {
   font-size: 16px;
   font-weight: 600;
-  margin-bottom: 8px;
   color: #82C8E5;
 }
-
-
-body.light-mode .timeline-company { color: #345766; }
 
 .timeline-content p {
   font-size: 13px;
@@ -243,6 +250,42 @@ body.light-mode .timeline-company { color: #345766; }
   margin-bottom: 10px;
 }
 
+/* ===== ACCORDION ===== */
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.2s;
+}
+
+.accordion-header:hover { opacity: 0.8; }
+
+.accordion-arrow {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.open .accordion-arrow {
+  transform: rotate(180deg);
+}
+
+.accordion-body {
+  display: none;
+  padding: 16px 0 8px;
+}
+
+.accordion-body p {
+  font-size: 13px;
+  line-height: 1.7;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+/* ===== QUOTE SECTION ===== */
 .quote-section {
   min-height: 30vh;
   padding: 60px 8%;
